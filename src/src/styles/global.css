@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-linkedrh-blue: #0f3768;
+  --color-linkedrh-green: #34a835;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
