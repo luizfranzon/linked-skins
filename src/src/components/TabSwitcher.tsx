@@ -1,10 +1,12 @@
-import { useState } from "react";
+interface TabSwitcherProps {
+  currentTab: Tabs;
+  setCurrentTab: (tab: Tabs) => void;
+}
 
-type Tabs = "skins" | "config";
+export type Tabs = "skins" | "config";
 
-export function TabSwitcher() {
-  const [currentTab, setCurrentTab] = useState<Tabs>("skins");
-
+export function TabSwitcher({ currentTab, setCurrentTab }: TabSwitcherProps) {
+  
   const handleSelectTab = (tabName: Tabs) => setCurrentTab(tabName);
 
   const isActive = (tab: Tabs) => currentTab === tab;
@@ -41,7 +43,6 @@ export function TabSwitcher() {
           </div>
         ))}
       </div>
-      <h1>{currentTab}</h1>
     </div>
   );
 }
